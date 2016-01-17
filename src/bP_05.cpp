@@ -16,7 +16,13 @@ using namespace std;
 int main( int argc, char* argv[] ) {
 
   // store command line parameters
-  AnalysisInfo* info = new AnalysisInfo( argc, argv );
+
+	int argc2 = 7;
+	char* argv2[] =
+	{
+			"./Debug/Ronch_braggPlot_v05", "input", "bragg_events.txt", "hist", "hh", "ranges", "energyRanges"
+	};
+  AnalysisInfo* info = new AnalysisInfo( argc2, argv2 );
 
   // create data source
   EventSource* es = SourceFactory::create( info );

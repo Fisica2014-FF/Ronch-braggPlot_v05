@@ -14,6 +14,7 @@
 #include "../dbg_macro.h"
 #include "../TotalEnergy.h"
 #include "../util/include/Singleton.h"
+#include "../dbg_macro.h"
 
 
 using namespace std;
@@ -56,6 +57,8 @@ void EnergyDist::beginJob() {
 // create energy distributions for different total energy ranges
 
 	std::ifstream ifs(aInfo->value("ranges"));
+	DBG(clog << aInfo->value("ranges") << endl; , ;);
+
 	if (!ifs) {
 		cerr << "[ERROR]: file not opened";
 		throw -2;
