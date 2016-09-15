@@ -89,7 +89,7 @@
 								<option id="gnu.cpp.compiler.option.preprocessor.undef.47260230" name="Undefined symbols (-U)" superClass="gnu.cpp.compiler.option.preprocessor.undef" useByScannerDiscovery="false" valueType="undefDefinedSymbols">
 									<listOptionValue builtIn="false" value="DEBUG"/>
 								</option>
-								<option id="gnu.cpp.compiler.option.other.other.644907796" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" useByScannerDiscovery="false" value="-c -fmessage-length=0 -pthread -Wno-deprecated-declarations -m64 -I~/ROOT/ROOT_6_06_00/include" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.other.other.644907796" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" useByScannerDiscovery="false" value="-c -fmessage-length=0 `~/ROOT/v5-34-36/bin/root-config --cflags`" valueType="string"/>
 								<option id="gnu.cpp.compiler.option.other.pic.983570569" name="Position Independent Code (-fPIC)" superClass="gnu.cpp.compiler.option.other.pic" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1073115571" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -101,7 +101,7 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.release.190085210" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.release"/>
 							<tool commandLinePattern="${COMMAND} ${INPUTS} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT}" id="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.502186828" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.release">
-								<option id="gnu.cpp.link.option.flags.529096376" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="-L~/ROOT/ROOT_6_06_00/lib -lCore -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -pthread -lm -ldl -rdynamic" valueType="string"/>
+								<option id="gnu.cpp.link.option.flags.529096376" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="`~/ROOT/v5-34-36/bin/root-config --libs`" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1032517643" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -145,7 +145,7 @@
 								<option id="gnu.cpp.compiler.option.other.verbose.1314641861" name="Verbose (-v)" superClass="gnu.cpp.compiler.option.other.verbose" useByScannerDiscovery="false" value="false" valueType="boolean"/>
 								<option id="gnu.cpp.compiler.option.warnings.pedantic.1646303867" name="Pedantic (-pedantic)" superClass="gnu.cpp.compiler.option.warnings.pedantic" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<option id="gnu.cpp.compiler.option.warnings.extrawarn.1904958343" name="Extra warnings (-Wextra)" superClass="gnu.cpp.compiler.option.warnings.extrawarn" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-								<option id="gnu.cpp.compiler.option.other.other.1231277517" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" useByScannerDiscovery="false" value="-c -fmessage-length=0 -Weffc++" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.other.other.1231277517" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" useByScannerDiscovery="false" value="-c -fmessage-length=0 -Weffc++ `~/ROOT/v5-34-36/bin/root-config --cflags`" valueType="string"/>
 								<option id="gnu.cpp.compiler.option.debugging.other.1203353170" name="Other debugging flags" superClass="gnu.cpp.compiler.option.debugging.other" useByScannerDiscovery="false" value="-ggdb -fsanitize=address" valueType="string"/>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.266558208" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="DEBUG"/>
@@ -163,7 +163,7 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.1503440222" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.1583877196" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
-								<option id="gnu.cpp.link.option.flags.1768865455" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="-fsanitize=address" valueType="string"/>
+								<option id="gnu.cpp.link.option.flags.1768865455" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="-fsanitize=address `~/ROOT/v5-34-36/bin/root-config --libs`" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1998032640" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -211,6 +211,7 @@
 									<listOptionValue builtIn="false" value="DEBUG"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.optimization.flags.2113517274" name="Other optimization flags" superClass="gnu.cpp.compiler.option.optimization.flags" useByScannerDiscovery="false" value="-flto -march=native" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.other.other.91435301" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 `~/ROOT/v5-34-36/bin/root-config --cflags`" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.376969177" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.638128835" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release">
@@ -221,7 +222,7 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.release.403508993" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.release"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.1191395255" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.release">
-								<option id="gnu.cpp.link.option.flags.1276626356" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="-flto -O3" valueType="string"/>
+								<option id="gnu.cpp.link.option.flags.1276626356" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="-flto -O3 `~/ROOT/v5-34-36/bin/root-config --libs`" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.815376867" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -269,6 +270,7 @@
 									<listOptionValue builtIn="false" value="DEBUG"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.optimization.flags.898962044" name="Other optimization flags" superClass="gnu.cpp.compiler.option.optimization.flags" useByScannerDiscovery="false" value="-flto -march=native -ffast-math" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.other.other.545351960" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 `~/ROOT/v5-34-36/bin/root-config --cflags`" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.473250071" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.864279617" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release">
@@ -279,7 +281,7 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.release.697718728" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.release"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.259288396" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.release">
-								<option id="gnu.cpp.link.option.flags.742632289" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="-flto -O3" valueType="string"/>
+								<option id="gnu.cpp.link.option.flags.742632289" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="-flto -O3 `~/ROOT/v5-34-36/bin/root-config --libs`" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.15248526" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>

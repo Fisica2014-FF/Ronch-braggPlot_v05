@@ -17,7 +17,7 @@ CPP_DEPS += \
 src/%.o: ../src/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
-	g++ -std=c++0x -DNDEBUG -UDEBUG -O3 -Wall -c -fmessage-length=0 -pthread -Wno-deprecated-declarations -m64 -I~/ROOT/ROOT_6_06_00/include -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	g++ -std=c++0x -DNDEBUG -UDEBUG -O3 -Wall -c -fmessage-length=0 `~/ROOT/v5-34-36/bin/root-config --cflags` -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
