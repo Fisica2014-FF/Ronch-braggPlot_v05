@@ -123,6 +123,7 @@ void EnergyDist::endJob() {
 	//Save also totenergy_graph
 	totenergy_graph->Write();
 
+
 //... close ROOT file ...
 	delete file;
 	currentDir->cd();
