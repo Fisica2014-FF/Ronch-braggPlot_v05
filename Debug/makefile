@@ -48,7 +48,7 @@ all: Ronch_braggPlot_v05
 Ronch_braggPlot_v05: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ $(OBJS) $(USER_OBJS) $(LIBS) `~/ROOT/v5-34-36/bin/root-config --libs` -o "Ronch_braggPlot_v05"
+	g++ $(OBJS) $(USER_OBJS) $(LIBS) `root-config --libs` -o "Ronch_braggPlot_v05"
 	@echo 'Finished building target: $@'
 	@echo ' '
 
