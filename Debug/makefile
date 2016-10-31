@@ -48,7 +48,7 @@ all: ROOT_Eclipse_project
 ROOT_Eclipse_project: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ $(OBJS) $(USER_OBJS) $(LIBS) `root-config --libs` -o "ROOT_Eclipse_project"
+	g++ $(OBJS) $(USER_OBJS) $(LIBS) `root-config --libs` -o  "ROOT_Eclipse_project"
 	@echo 'Finished building target: $@'
 	@echo ' '
 
