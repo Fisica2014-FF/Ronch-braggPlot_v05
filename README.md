@@ -13,5 +13,5 @@
 4. Put the scripts to run eclipse (eg `~/SCRIPT_ROOT_ECLIPSE/eclipse_root534.sh`) for example on the Desktop
 
 ##Usage
-1. Open a terminal and select the root to use with the aliases (eg `root_534_select`) or soucing the scripts in `~/Documents/root_varie`
+1. Open a terminal and select the root to use with the aliases (eg `root_6_06_select`) or soucing the scripts in `~/Documents/root_varie`
 2. Open eclipse using the script corresponding the selected ROOT

@@ -42,19 +42,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: Ronch_braggPlot_v05
+all: ROOT_Eclipse_project
 
 # Tool invocations
-Ronch_braggPlot_v05: $(OBJS) $(USER_OBJS)
+ROOT_Eclipse_project: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ $(OBJS) $(USER_OBJS) $(LIBS) `~/ROOT/v5-34-36/bin/root-config --libs` -o "Ronch_braggPlot_v05"
+	g++ $(OBJS) $(USER_OBJS) $(LIBS) `root-config --libs` -o  "ROOT_Eclipse_project"
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(CC_DEPS)$(C++_DEPS)$(EXECUTABLES)$(C_UPPER_DEPS)$(CXX_DEPS)$(OBJS)$(CPP_DEPS)$(C_DEPS) Ronch_braggPlot_v05
+	-$(RM) $(CC_DEPS)$(C++_DEPS)$(EXECUTABLES)$(C_UPPER_DEPS)$(CXX_DEPS)$(OBJS)$(CPP_DEPS)$(C_DEPS) ROOT_Eclipse_project
 	-@echo ' '
 
 .PHONY: all clean dependents

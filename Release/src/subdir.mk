@@ -3,21 +3,35 @@
 ################################################################################
 
 # Add inputs and outputs from these tool invocations to the build variables 
+C_UPPER_SRCS += \
+../src/main_macro.C 
+
 CPP_SRCS += \
-../src/bP_05.cpp 
+../src/main.cpp 
+
+C_UPPER_DEPS += \
+./src/main_macro.d 
 
 OBJS += \
-./src/bP_05.o 
+./src/main.o \
+./src/main_macro.o 
 
 CPP_DEPS += \
-./src/bP_05.d 
+./src/main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
 src/%.o: ../src/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
-	g++ -std=c++0x -DNDEBUG -UDEBUG -O3 -Wall -c -fmessage-length=0 `~/ROOT/v5-34-36/bin/root-config --cflags` -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	g++ "$<" -std=c++0x -DNDEBUG -O3 -Wall -c -fmessage-length=0 `root-config --cflags` -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o  "$@"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+src/%.o: ../src/%.C
+	@echo 'Building file: $<'
+	@echo 'Invoking: GCC C++ Compiler'
+	g++ "$<" -std=c++0x -DNDEBUG -O3 -Wall -c -fmessage-length=0 `root-config --cflags` -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o  "$@"
 	@echo 'Finished building: $<'
 	@echo ' '
 
